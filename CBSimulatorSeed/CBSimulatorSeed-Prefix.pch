@@ -1,0 +1,24 @@
+//
+// Prefix header for all source files of the 'CBSimulatorSeed' target in the 'CBSimulatorSeed' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+  #import <UIKit/UIKit.h>
+  #import <Foundation/Foundation.h>
+#endif
+
+#import <SVProgressHUD.h>
+#import <EDQueue.h>
+#import <AFNetworking.h>
+#import <BlocksKit.h>
+#import <NSString+Inflections.h>
+#import <AddressBook.h>
+#import <RegexKitLite.h>
+#import <SVProgressHUD.h>
+#import <MBFaker.h>
