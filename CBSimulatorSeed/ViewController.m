@@ -87,12 +87,17 @@
 }
 
 - (void)seed {
-  NSDictionary *data = @{
-                         @"delete-contacts" : @(self.deleteContactsSwitch.isOn),
-                         @"contacts" : @(self.contactsSwitch.value),
-                         @"photos" : @(self.photosSwitch.value)
-                         };
-  [[EDQueue sharedInstance] enqueueWithData:data forTask:@"seed"];
+  RHAddressBook *ab = [[RHAddressBook alloc] init];
+  [ab requestAuthorizationWithCompletion:^(bool granted, NSError *error) {
+    if (granted) {
+      NSDictionary *data = @{
+                             @"delete-contacts" : @(self.deleteContactsSwitch.isOn),
+                             @"contacts" : @(self.contactsSwitch.value),
+                             @"photos" : @(self.photosSwitch.value)
+                             };
+      [[EDQueue sharedInstance] enqueueWithData:data forTask:@"seed"];
+    }
+  }];
 }
 
 - (void)queue:(EDQueue *)queue processJob:(NSDictionary *)job completion:(void (^)(EDQueueResult result))block {
