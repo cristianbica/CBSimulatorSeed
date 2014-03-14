@@ -12,7 +12,7 @@
 
 - (void)performWithCompletion:(void (^)(EDQueueResult))block {
   __block RHAddressBook *ab = [[RHAddressBook alloc] init];
-  [[ab people] each:^(RHPerson *person) {
+  [[ab people] bk_each:^(RHPerson *person) {
     [ab removePerson:person];
   }];
   [ab save];

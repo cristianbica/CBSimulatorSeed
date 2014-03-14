@@ -52,6 +52,9 @@
 - (void)performWithCompletion:(void (^)(EDQueueResult))block {
   RHAddressBook *ab = [[RHAddressBook alloc] init];
   int n = [self.data[@"count"] intValue];
+  if (n<=0) {
+    return;
+  }
   for (int i=0; i<n; i++) {
     RHPerson *p = [ab newPersonInDefaultSource];
     [self populateRecord:p];

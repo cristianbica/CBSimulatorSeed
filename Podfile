@@ -1,4 +1,4 @@
-platform :ios, "5.0"
+platform :ios, "6.0"
 
 pod 'AFNetworking', '~> 1.0'
 pod 'BlocksKit'

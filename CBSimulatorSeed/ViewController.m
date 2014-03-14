@@ -34,7 +34,7 @@
     NSLog(@"JOB SUCCEED: %@", note.object);
     if ([[note.object objectForKey:@"task"] isEqualToString:@"seed"]) {
       [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
-      self.totalJobs = [[[EDQueue sharedInstance] engine] fetchJobCount]-1;
+      self.totalJobs = (int)[[[EDQueue sharedInstance] engine] fetchJobCount]-1;
       self.doneJobs = 0;
     } else  if ([[note.object objectForKey:@"task"] isEqualToString:@"seed-finished"]) {
       [SVProgressHUD dismiss];

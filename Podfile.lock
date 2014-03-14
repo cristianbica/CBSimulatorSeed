@@ -1,21 +1,35 @@
 PODS:
-  - AFNetworking (1.3.2)
-  - BlocksKit (1.8.2):
-    - libffi
+  - AFNetworking (1.3.3)
+  - BlocksKit (2.2.0):
+    - BlocksKit/All
+  - BlocksKit/All (2.2.0):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.0)
+  - BlocksKit/DynamicDelegate (2.2.0):
+    - BlocksKit/MiniFFI
+  - BlocksKit/MessageUI (2.2.0):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/MiniFFI (2.2.0)
+  - BlocksKit/UIKit (2.2.0):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
   - EDQueue (0.7.0):
     - FMDB (~> 2.0)
-  - FMDB (2.1):
+  - FMDB (2.2):
     - FMDB/standard
-  - FMDB/common (2.1)
-  - FMDB/standard (2.1):
+  - FMDB/common (2.2)
+  - FMDB/standard (2.2):
     - FMDB/common
   - Inflections (1.0.0):
     - RegexKitLite
-  - libffi (3.0.13)
   - MBFaker (0.1.2)
   - RegexKitLite (4.0)
-  - RHAddressBook (HEAD based on 1.0.2)
-  - SVProgressHUD (0.9)
+  - RHAddressBook (HEAD based on 1.1.0)
+  - SVProgressHUD (1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 1.0)
@@ -27,15 +41,14 @@ DEPENDENCIES:
   - SVProgressHUD
 
 SPEC CHECKSUMS:
-  AFNetworking: 7f9bcd7c287a75476cd5c61e82fd3380e93e4c54
-  BlocksKit: 7396526b0816734103f6133fbb1a520c8b04e80c
+  AFNetworking: 61fdd49e2ffe6380378df37b3b6e70630bb9dd66
+  BlocksKit: 1b106f407a11997fd79e1da31453758e51277613
   EDQueue: 1daf5ed62560b4440eae510f1b9d50717d42b92e
-  FMDB: 3fd5aaf632ca4ed39e3f101e0398504e6d5b0918
+  FMDB: 97472cfacf0d9e445e915704fb43b4b142799c36
   Inflections: e77c455409381402163911a75835892fd406ff99
-  libffi: 64ef39353e747bb2b25e1026afd96a157bf9231c
   MBFaker: cf53384c68e5d59b408b66f7487447be580e1b05
   RegexKitLite: f7af7b4d2b675cd2ec9a4abab6aad6ae1f6499c0
-  RHAddressBook: 64f78a4058e0a7849275c970bf19fe195edf94d0
-  SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8
+  RHAddressBook: 5a6de1f752bc8cbfd7902ec80207e64422914c79
+  SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
 
 COCOAPODS: 0.29.0
