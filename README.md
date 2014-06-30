@@ -9,3 +9,6 @@ Usage
 1. Clone the repo
 2. run `pod install` (make sure you have the latest cocoapods gem)
 3. open CBSimulatorSeed.xcworkspace in XCode
+
+
+PS: And a Swift port: https://github.com/cristianbica/CBSimulatorSeed-Swift
